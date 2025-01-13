@@ -18,8 +18,8 @@ class Comment < ApplicationRecord
     
     matching_users = User.where({ :id => my_id })
 
-    the_user = matching_users.at(0)
+    @the_user = matching_users.at(0)
     
-    return the_user
+    return @the_user
   end
 end
